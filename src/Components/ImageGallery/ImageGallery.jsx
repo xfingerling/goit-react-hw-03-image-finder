@@ -30,12 +30,12 @@ class ImageGallery extends Component {
 
   render() {
     const { imgs, onModalOpen } = this.props;
-    const listItem = imgs.map((el) => (
+    const listItem = imgs.map(({ id, webformatURL, largeImageURL, tags }) => (
       <ImageGalleryItem
-        key={el.id}
-        src={el.webformatURL}
-        largeImageURL={el.largeImageURL}
-        onModalOpen={onModalOpen}
+        key={id}
+        src={webformatURL}
+        alt={tags}
+        onModalOpen={() => onModalOpen(largeImageURL)}
       />
     ));
 

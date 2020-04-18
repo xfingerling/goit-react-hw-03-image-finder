@@ -3,7 +3,7 @@ import { render } from "react-dom";
 
 import "./index.css";
 
-import GalleryApp from "./Components/GalleryApp/GalleryApp";
+import GalleryApp from "./Components/GalleryApp/GalleryApp.jsx";
 
 class App extends Component {
   render() {
