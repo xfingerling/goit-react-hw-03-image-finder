@@ -1,5 +1,5 @@
 # Image Finder
-![preview](https://i.ibb.co/d6cTFGj/Screenshot-6.png)
+![preview](https://i.piccy.info/i9/1a3658c94dfee4f7000202a0a3b06e5c/1588774508/375030/1376251/Screenshot_6.jpg)
 
 Keyword image search application with using [Pixabay API](https://pixabay.com/api/docs/)
 
