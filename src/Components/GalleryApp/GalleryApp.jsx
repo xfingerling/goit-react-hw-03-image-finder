@@ -6,7 +6,7 @@ import Searchbar from "../Searchbar/Searchbar";
 import ImageGallery from "../ImageGallery/ImageGallery";
 import Button from "../Button/Button";
 import Modal from "../Modal/Modal";
-import MyLoader from "../Loader/Loader";
+import Loader from "../Loader/Loader";
 
 import PixabayAPI from "../../api/PixabayAPI";
 
@@ -81,9 +81,11 @@ class GalleryApp extends Component {
     return (
       <div className={styles.galleryApp}>
         <Searchbar onSubmit={this.handleQueryChange} />
+
         {!!imgs.length && (
           <ImageGallery imgs={imgs} onModalOpen={this.handleModalOpen} />
         )}
+
         {!!imgs.length && <Button onLoadMore={this.handleLoadMore} />}
         {modalIsOpen && (
           <Modal
@@ -91,7 +93,8 @@ class GalleryApp extends Component {
             onModalClose={this.handleModalClose}
           />
         )}
-        {isLoading && <MyLoader />}
+
+        {isLoading && <Loader />}
       </div>
     );
   }

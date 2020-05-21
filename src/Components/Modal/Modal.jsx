@@ -5,8 +5,8 @@ import styles from "./Modal.module.css";
 
 class Modal extends Component {
   static propTypes = {
-    largeImageURL: PropTypes.string,
-    onModalClose: PropTypes.func,
+    largeImageURL: PropTypes.string.isRequired,
+    onModalClose: PropTypes.func.isRequired,
   };
 
   componentDidMount() {

@@ -4,18 +4,20 @@ import PropTypes from "prop-types";
 import styles from "./ImageGallery.module.css";
 
 import PixabayAPI from "../../api/PixabayAPI";
-import ImageGalleryItem from "../ImageGalleryItem/ImageGalleryItem";
+import ImageGalleryItem from "./ImageGalleryItem/ImageGalleryItem";
 
 class ImageGallery extends Component {
   static propTypes = {
-    imgs: PropTypes.array,
-    onModalOpen: PropTypes.func,
+    imgs: PropTypes.array.isRequired,
+    onModalOpen: PropTypes.func.isRequired,
   };
 
   listRef = createRef();
 
   componentDidUpdate(prevProps) {
     const { current } = this.listRef;
+
+    if (!window.pageYOffset) return;
 
     if (current && prevProps.imgs !== this.props.imgs) {
       const scrollToElem =
