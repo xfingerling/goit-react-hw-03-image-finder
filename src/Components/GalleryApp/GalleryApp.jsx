@@ -26,12 +26,12 @@ class GalleryApp extends Component {
       .finally(() => this.setState({ isLoading: false }));
   };
 
-  componentDidMount() {
-    const { query } = this.state;
+  // componentDidMount() {
+  //   const { query } = this.state;
 
-    this.setState({ isLoading: true });
-    this.fetchImg(query);
-  }
+  //   this.setState({ isLoading: true });
+  //   this.fetchImg(query);
+  // }
 
   componentDidUpdate(prevProps, prevState) {
     const { query } = this.state;

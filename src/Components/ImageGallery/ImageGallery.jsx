@@ -17,12 +17,10 @@ class ImageGallery extends Component {
   componentDidUpdate(prevProps) {
     const { current } = this.listRef;
 
-    if (!window.pageYOffset) return;
-
     if (current && prevProps.imgs !== this.props.imgs) {
       const scrollToElem =
         PixabayAPI.page * PixabayAPI.perPage - PixabayAPI.perPage;
-
+      if (!scrollToElem) return;
       current.children[scrollToElem].scrollIntoView({
         behavior: "smooth",
         block: "start",
